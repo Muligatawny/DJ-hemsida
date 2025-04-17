@@ -5,16 +5,19 @@ body {
   background-color: #802020;
   color: #f4e9e5;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 h1, h2 {
   font-family: 'Playfair Display', serif;
   color: #c9a066;
-  text-shadow: 1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #00000099;
+  letter-spacing: 1px;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -26,48 +29,60 @@ a {
 /* ==== Hero ==== */
 .hero {
   text-align: center;
-  padding: 4rem 1rem 3rem;
+  padding: 5rem 1rem 4rem;
   border: 4px double #c9a066;
-  background-color: #5e1515;
-  box-shadow: inset 0 0 10px #00000080;
-  position: relative;
+  background: radial-gradient(circle, #5e1515, #3c0f0f);
+  box-shadow: inset 0 0 20px #00000088;
+  border-radius: 12px;
 }
 
 .hero h1 {
   font-size: 4rem;
   margin-bottom: 0.5rem;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .tagline {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: #fcdcdc;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==== Knappar ==== */
 .button {
-  padding: 0.8rem 1.6rem;
-  font-weight: bold;
+  padding: 0.9rem 1.8rem;
+  font-weight: 700;
   font-size: 1rem;
-  border-radius: 5px;
-  border: 2px outset #fff;
+  border-radius: 6px;
+  border: 2px solid transparent;
   margin: 0.5rem;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .button:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px #00000033;
 }
 
 .button.olive {
   background-color: #6c7a5a;
   color: #fffbe6;
+  border-color: #556349;
 }
 
 .button.gold {
   background-color: #c9a066;
   color: #401010;
+  border-color: #a3793e;
 }
 
 /* ==== Marquee ==== */
@@ -79,8 +94,9 @@ a {
   font-size: 1rem;
   border-top: 2px solid #c9a066;
   border-bottom: 2px solid #c9a066;
-  padding: 0.5rem;
-  margin: 1.5rem 0;
+  padding: 0.6rem;
+  margin: 2rem 0;
+  box-shadow: 0 0 8px #00000020 inset;
 }
 
 /* ==== Cards ==== */
@@ -100,11 +116,15 @@ a {
   background-color: #fffbe6;
   color: #401010;
   border: 3px groove #c9a066;
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 1.75rem;
+  border-radius: 10px;
   font-size: 1rem;
-  text-shadow: none;
-  box-shadow: 0 0 10px #00000050;
+  box-shadow: 0 0 15px #00000040;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.015);
 }
 
 .card.full {
@@ -120,7 +140,8 @@ a {
   font-style: italic;
   border-left: 10px double #6c7a5a;
   border-right: 10px double #6c7a5a;
-  box-shadow: 0 0 15px #00000030;
+  box-shadow: 0 0 20px #00000020;
+  border-radius: 10px;
 }
 
 /* ==== Galleri ==== */
@@ -144,32 +165,33 @@ a {
   height: 200px;
   border: 2px dashed #c9a066;
   border-radius: 6px;
-  box-shadow: 0 0 10px #00000040;
-  transition: filter 0.3s;
+  box-shadow: 0 0 12px #00000040;
+  transition: filter 0.3s, transform 0.3s;
 }
 
 .gallery-item:hover {
   filter: brightness(1.2);
+  transform: scale(1.02);
 }
 
 /* ==== Kontakt ==== */
 .contact {
   margin-top: 4rem;
   background-color: #5e1515;
-  padding: 2rem;
-  border-radius: 6px;
-  box-shadow: inset 0 0 15px #000;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 15px #00000080;
   text-align: center;
 }
 
 .contact p {
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #f4dede;
 }
 
 .social-links {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -179,6 +201,12 @@ a {
 .social-links a {
   color: #c9a066;
   font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #f5e8d6;
 }
 
 /* ==== Footer ==== */
