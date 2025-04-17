@@ -1,58 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
-
+/* Grundinställningar */
 body {
     margin: 0;
-    font-family: 'Manrope', sans-serif;
-    background-color: #fdfcf9;
-    color: #000;
-}
-
-header {
-    background-color: #234c3c;
-    color: #fdfcf9;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to bottom right, #000000, #1a1a1a, #333333);
+    color: #ffffff;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
     padding: 2rem;
+  }
+  
+  .hero {
     text-align: center;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-}
-
-main {
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-section {
-    margin-bottom: 2.5rem;
-}
-
-h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-}
-
-p, li {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-ul {
-    padding-left: 1rem;
-}
-
-a {
-    color: #234c3c;
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #234c3c;
-    color: #fdfcf9;
+    padding: 4rem 1rem 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+    color: #cccccc;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button.secondary {
+    background-color: #ffd700;
+    color: #000;
+  }
+  
+  .button.outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Cards */
+  .cards {
+    display: grid;
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+  
+  @media (min-width: 768px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .card {
+    background-color: #111111;
+    border: 1px solid #444;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .card.full {
+    grid-column: span 2;
+  }
+  
+  /* Footer */
+  footer {
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
+    padding: 2rem 1rem;
+    color: #888888;
+    font-size: 0.875rem;
+  }
+  
