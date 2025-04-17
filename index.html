@@ -1,72 +1,94 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DJ Albini</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <header class="hero">
-        <h1>DJ Albini</h1>
-        <p class="tagline">Två Albins. Ett sound. Bröllop. Beats. Albini.</p>
-        <div class="cta-buttons">
-          <a href="#kontakt" class="button olive">Boka Oss</a>
-          <a href="#lyssna" class="button gold">Lyssna</a>
-        </div>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ Albini – Minimal Equalizer</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(43, 103, 162);
+      font-family: 'Manrope', sans-serif;
+      color: rgb(231, 156, 177);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-      <section class="retro-marquee">
-        <marquee behavior="scroll" direction="left">DJ Albini spelar från Umberto Tozzi till ABBA med amore, groove och retrokänsla.</marquee>
-      </section>
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
 
-      <section class="cards">
-        <div class="card">
-          <h2>💍 Bröllop</h2>
-          <p>Vi skapar bröllopsmagi med elegans och vinyl. Tänk spritz i solnedgången, en dans till "Ti Amo" och ett dansgolv som aldrig dör.</p>
-        </div>
+    .eq-line {
+      width: 100%;
+      height: 4px;
+      overflow: hidden;
+      background-color: transparent;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
 
-        <div class="card">
-          <h2>🎉 Fest & Event</h2>
-          <p>Från 90-talets italodisco till modern house. Vi får farbror Giuseppe och kusin Olivia att dansa tillsammans.</p>
-        </div>
+    .wave {
+      width: 200%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to right,
+        #c9a066 0,
+        #c9a066 2px,
+        transparent 2px,
+        transparent 6px
+      );
+      animation: waveMove 1.5s linear infinite;
+    }
 
-        <div class="card full">
-          <h2>🎵 Albini Sound</h2>
-          <p>Ett sound för hjärtat och fötterna. Vi blandar stilren house med glädje, passion och medelhavskrydda.</p>
-        </div>
-      </section>
+    @keyframes waveMove {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
 
-      <section class="special-feature">
-        <h2>🍝 Veckans Albini-recept</h2>
-        <p>Rigatoni alla groove – musik som lagas långsamt men exploderar på dansgolvet. (Och i munnen.)</p>
-      </section>
+    .trail-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #c9a066;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.6;
+      animation: fadeOut 0.6s ease-out forwards;
+    }
 
-      <section class="gallery">
-        <h2>🎞️ Retro Moments</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item"></div>
-          <div class="gallery-item"></div>
-          <div class="gallery-item"></div>
-        </div>
-      </section>
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>DJ Albini</h1>
+  <div class="eq-line">
+    <div class="wave"></div>
+  </div>
 
-      <section class="contact" id="kontakt">
-        <h2>📬 Kontakt</h2>
-        <p>Vill du boka oss? Har du ett gammalt modem och vill snacka disketter och dans?</p>
-        <a href="mailto:ciao@djalbini.se" class="button gold">Maila Oss</a>
-        <div class="social-links">
-          <a href="https://www.instagram.com/LE_GRAND_PRIX/" target="_blank">Instagram</a>
-          <a href="https://open.spotify.com/user/albin1994?si=71931ceb10284890" target="_blank">Spotify</a>
-        </div>
-      </section>
-
-      <footer>
-        <p>© 2025 DJ Albini. Vi blandar minnen med mozzarella.</p>
-        <div class="flag-bar"></div>
-      </footer>
-    </div>
-  </body>
+  <script>
+    document.addEventListener("mousemove", function(e) {
+      const dot = document.createElement("div");
+      dot.className = "trail-dot";
+      dot.style.left = e.pageX + "px";
+      dot.style.top = e.pageY + "px";
+      document.body.appendChild(dot);
+      setTimeout(() => dot.remove(), 600);
+    });
+  </script>
+</body>
 </html>
