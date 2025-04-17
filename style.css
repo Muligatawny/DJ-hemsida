@@ -1,23 +1,19 @@
-/* ==== Grundinställningar ==== */
 body {
     margin: 0;
     font-family: 'Manrope', sans-serif;
     background-color: #802020;
     color: #f4e9e5;
     overflow-x: hidden;
-    line-height: 1.6;
   }
   
   h1, h2 {
     font-family: 'Playfair Display', serif;
     color: #c9a066;
-    text-shadow: 1px 1px 0 #00000099;
-    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 #000;
   }
   
   a {
     text-decoration: none;
-    color: inherit;
   }
   
   .container {
@@ -26,20 +22,18 @@ body {
     padding: 2rem;
   }
   
-  /* ==== Hero ==== */
   .hero {
     text-align: center;
-    padding: 5rem 1rem 4rem;
+    padding: 4rem 1rem 3rem;
     border: 4px double #c9a066;
-    background: radial-gradient(circle, #5e1515, #3c0f0f);
-    box-shadow: inset 0 0 20px #00000088;
+    background-color: #5e1515;
+    box-shadow: inset 0 0 10px #00000080;
     border-radius: 12px;
   }
   
   .hero h1 {
     font-size: 4rem;
     margin-bottom: 0.5rem;
-    animation: fadeIn 1.5s ease-out;
   }
   
   .tagline {
@@ -49,12 +43,6 @@ body {
     font-style: italic;
   }
   
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* ==== Knappar ==== */
   .button {
     padding: 0.9rem 1.8rem;
     font-weight: 700;
@@ -85,7 +73,6 @@ body {
     border-color: #a3793e;
   }
   
-  /* ==== Marquee ==== */
   .retro-marquee {
     background-color: #fcdcdc;
     color: #5e1515;
@@ -99,7 +86,6 @@ body {
     box-shadow: 0 0 8px #00000020 inset;
   }
   
-  /* ==== Cards ==== */
   .cards {
     display: grid;
     gap: 1.5rem;
@@ -131,7 +117,6 @@ body {
     grid-column: span 2;
   }
   
-  /* ==== Special Feature ==== */
   .special-feature {
     margin: 3rem 0;
     padding: 2rem;
@@ -144,7 +129,6 @@ body {
     border-radius: 10px;
   }
   
-  /* ==== Galleri ==== */
   .gallery {
     margin-top: 4rem;
     text-align: center;
@@ -174,7 +158,6 @@ body {
     transform: scale(1.02);
   }
   
-  /* ==== Kontakt ==== */
   .contact {
     margin-top: 4rem;
     background-color: #5e1515;
@@ -209,7 +192,6 @@ body {
     color: #f5e8d6;
   }
   
-  /* ==== Footer ==== */
   footer {
     margin-top: 4rem;
     text-align: center;
@@ -227,7 +209,6 @@ body {
     margin-top: 1rem;
   }
   
-  /* ==== Mouse Trail ==== */
   .trail-dot {
     position: absolute;
     width: 8px;
