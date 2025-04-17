@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ Albini</title>
     <link rel="stylesheet" href="style.css" />
@@ -22,6 +22,56 @@
         to {
           opacity: 0;
           transform: scale(0.5);
+        }
+      }
+
+      .equalizer {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 6px;
+        height: 40px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #401010;
+        padding: 6px 0;
+        z-index: 5;
+      }
+
+      .bar {
+        width: 6px;
+        background: #c9a066;
+        animation: bounce 1.2s infinite ease-in-out;
+        border-radius: 2px;
+      }
+
+      .bar:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .bar:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .bar:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .bar:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+      .bar:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+      .bar:nth-child(6) {
+        animation-delay: 1s;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          height: 10%;
+        }
+        50% {
+          height: 100%;
         }
       }
     </style>
@@ -86,6 +136,15 @@
         <p>© 2025 DJ Albini. Vi blandar minnen med mozzarella.</p>
         <div class="flag-bar"></div>
       </footer>
+    </div>
+
+    <div class="equalizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
 
     <script>
