@@ -1,9 +1,9 @@
 /* ==== Grundinställningar ==== */
 body {
     margin: 0;
-    font-family: 'Raleway', sans-serif;
-    background: radial-gradient(ellipse at top, #0d0d0d, #000000);
-    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    background-color: rgb(43, 103, 162); /* Blå bakgrund */
+    color: rgb(231, 156, 177); /* Rosa text */
     overflow-x: hidden;
   }
   
@@ -22,32 +22,21 @@ body {
   .hero {
     text-align: center;
     padding: 5rem 1rem 3rem;
-    background: linear-gradient(135deg, #111, #1a1a1a, #222);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
   }
   
   .hero h1 {
     font-size: 5rem;
     font-weight: 800;
-    background: linear-gradient(to right, #ffcc00, #ff007f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glowText 3s ease-in-out infinite alternate;
-  }
-  
-  @keyframes glowText {
-    0% {
-      text-shadow: 0 0 10px #ff007f;
-    }
-    100% {
-      text-shadow: 0 0 30px #ffcc00;
-    }
+    color: rgb(231, 156, 177);
+    text-shadow: 0 0 10px rgba(231, 156, 177, 0.4);
   }
   
   .tagline {
     font-size: 1.5rem;
-    color: #cccccc;
+    color: rgba(231, 156, 177, 0.8);
     margin-bottom: 2rem;
   }
   
@@ -68,23 +57,23 @@ body {
   }
   
   .button.secondary {
-    background-color: #ffcc00;
-    color: #000;
-    box-shadow: 0 0 10px #ffcc00;
+    background-color: rgb(231, 156, 177);
+    color: rgb(43, 103, 162);
+    box-shadow: 0 0 10px rgba(231, 156, 177, 0.5);
   }
   
   .button.secondary:hover {
-    background-color: #fff700;
+    background-color: rgb(255, 180, 200);
     transform: scale(1.05);
   }
   
   .button.outline {
-    border: 2px solid #ffffff;
-    color: #ffffff;
+    border: 2px solid rgb(231, 156, 177);
+    color: rgb(231, 156, 177);
   }
   
   .button.outline:hover {
-    background-color: #ffffff20;
+    background-color: rgba(231, 156, 177, 0.15);
     transform: scale(1.05);
   }
   
@@ -102,24 +91,23 @@ body {
   }
   
   .card {
-    background-color: #141414;
-    border: 1px solid #444;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 2rem;
     border-radius: 12px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 0 15px #00000055;
   }
   
   .card:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 25px #ffcc0055;
+    box-shadow: 0 0 25px rgba(231, 156, 177, 0.3);
   }
   
   .card.full {
     grid-column: span 2;
   }
   
-  /* ==== Galleri / Vibes ==== */
+  /* ==== Galleri ==== */
   .gallery {
     margin-top: 4rem;
     text-align: center;
@@ -140,7 +128,7 @@ body {
     aspect-ratio: 1 / 1;
     background: url('https://images.unsplash.com/photo-1549921296-3c7d3a3bb436?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;
     border-radius: 12px;
-    box-shadow: 0 0 20px #00000077;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, filter 0.3s ease;
   }
   
@@ -153,10 +141,10 @@ body {
   .contact {
     margin-top: 6rem;
     text-align: center;
-    background: linear-gradient(to right, #111, #222);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 3rem 1rem;
     border-radius: 12px;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
   
   .contact h2 {
@@ -166,7 +154,7 @@ body {
   
   .contact p {
     margin-bottom: 1.5rem;
-    color: #bbb;
+    color: rgba(231, 156, 177, 0.8);
   }
   
   .social-links {
@@ -178,7 +166,7 @@ body {
   }
   
   .social-links a {
-    color: #ffcc00;
+    color: rgb(231, 156, 177);
     text-decoration: none;
     font-weight: 600;
     position: relative;
@@ -191,7 +179,7 @@ body {
     bottom: -3px;
     height: 2px;
     width: 100%;
-    background-color: #ffcc00;
+    background-color: rgb(231, 156, 177);
     transition: transform 0.2s ease;
     transform: scaleX(0);
     transform-origin: left;
@@ -205,9 +193,9 @@ body {
   footer {
     text-align: center;
     padding: 3rem 1rem 1rem;
-    color: #888888;
+    color: rgba(231, 156, 177, 0.6);
     font-size: 0.875rem;
-    border-top: 1px solid #222;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 4rem;
   }
   
