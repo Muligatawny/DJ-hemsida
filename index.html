@@ -1,83 +1,219 @@
-<!DOCTYPE html>
-<html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DJ Albini</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Manrope:wght@400;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container">
-      <header class="hero">
-        <h1>DJ Albini</h1>
-        <p class="tagline">Två Albins. Ett sound. Bröllop. Beats. Albini.</p>
-        <div class="cta-buttons">
-          <a href="#kontakt" class="button olive">Boka Oss</a>
-          <a href="#lyssna" class="button gold">Lyssna</a>
-        </div>
-      </header>
+/* ==== Grundinställningar ==== */
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background-color: #802020;
+  color: #f4e9e5;
+  overflow-x: hidden;
+}
 
-      <section class="retro-marquee">
-        <marquee behavior="scroll" direction="left">DJ Albini spelar från Umberto Tozzi till ABBA med amore, groove och retrokänsla.</marquee>
-      </section>
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #c9a066;
+  text-shadow: 1px 1px 0 #000;
+}
 
-      <section class="cards">
-        <div class="card">
-          <h2>Bröllop</h2>
-          <p>Vi skapar bröllopsmagi med elegans och vinyl. Tänk spritz i solnedgången, en dans till "Ti Amo" och ett dansgolv som aldrig dör.</p>
-        </div>
+a {
+  text-decoration: none;
+}
 
-        <div class="card">
-          <h2>Fest & Event</h2>
-          <p>Från 90-talets italodisco till modern house. Vi får farbror Giuseppe och kusin Olivia att dansa tillsammans.</p>
-        </div>
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-        <div class="card full">
-          <h2>Albini Sound</h2>
-          <p>Ett sound för hjärtat och fötterna. Vi blandar stilren house med glädje, passion och medelhavskrydda.</p>
-        </div>
-      </section>
+/* ==== Hero ==== */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  border: 4px double #c9a066;
+  background-color: #5e1515;
+  box-shadow: inset 0 0 10px #00000080;
+  position: relative;
+}
 
-      <section class="special-feature">
-        <h2>Veckans Albini-recept</h2>
-        <p>Rigatoni alla groove – musik som lagas långsamt men exploderar på dansgolvet. (Och i munnen.)</p>
-      </section>
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
 
-      <section class="gallery">
-        <h2>Retro Moments</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item"></div>
-          <div class="gallery-item"></div>
-          <div class="gallery-item"></div>
-        </div>
-      </section>
+.tagline {
+  font-size: 1.25rem;
+  color: #fcdcdc;
+  margin-bottom: 1.5rem;
+}
 
-      <section class="contact" id="kontakt">
-        <h2>Kontakt</h2>
-        <p>Vill du boka oss? Har du ett gammalt modem och vill snacka disketter och dans?</p>
-        <a href="mailto:ciao@djalbini.se" class="button gold">Maila Oss</a>
-        <div class="social-links">
-          <a href="https://www.instagram.com/LE_GRAND_PRIX/" target="_blank">Instagram</a>
-          <a href="https://open.spotify.com/user/albin1994?si=71931ceb10284890" target="_blank">Spotify</a>
-        </div>
-      </section>
+/* ==== Knappar ==== */
+.button {
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px outset #fff;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
 
-      <footer>
-        <p>© 2025 DJ Albini. Vi blandar minnen med mozzarella.</p>
-        <div class="flag-bar"></div>
-      </footer>
-    </div>
+.button:hover {
+  transform: scale(1.05);
+}
 
-    <script>
-      document.addEventListener("mousemove", function(e) {
-        const dot = document.createElement("div");
-        dot.className = "trail-dot";
-        dot.style.left = e.pageX + "px";
-        dot.style.top = e.pageY + "px";
-        document.body.appendChild(dot);
-        setTimeout(() => dot.remove(), 600);
-      });
-    </script>
-  </body>
-</html>
+.button.olive {
+  background-color: #6c7a5a;
+  color: #fffbe6;
+}
+
+.button.gold {
+  background-color: #c9a066;
+  color: #401010;
+}
+
+/* ==== Marquee ==== */
+.retro-marquee {
+  background-color: #fcdcdc;
+  color: #5e1515;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  border-top: 2px solid #c9a066;
+  border-bottom: 2px solid #c9a066;
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* ==== Cards ==== */
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: #fffbe6;
+  color: #401010;
+  border: 3px groove #c9a066;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-shadow: none;
+  box-shadow: 0 0 10px #00000050;
+}
+
+.card.full {
+  grid-column: span 2;
+}
+
+/* ==== Special Feature ==== */
+.special-feature {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f7f0e6, #e8dbc5);
+  color: #5e1515;
+  font-style: italic;
+  border-left: 10px double #6c7a5a;
+  border-right: 10px double #6c7a5a;
+  box-shadow: 0 0 15px #00000030;
+}
+
+/* ==== Galleri ==== */
+.gallery {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery-item {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Italo_Disco_Mixer.jpg/320px-Italo_Disco_Mixer.jpg') center/cover no-repeat;
+  height: 200px;
+  border: 2px dashed #c9a066;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #00000040;
+  transition: filter 0.3s;
+}
+
+.gallery-item:hover {
+  filter: brightness(1.2);
+}
+
+/* ==== Kontakt ==== */
+.contact {
+  margin-top: 4rem;
+  background-color: #5e1515;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: inset 0 0 15px #000;
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #f4dede;
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #c9a066;
+  font-weight: bold;
+}
+
+/* ==== Footer ==== */
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  background-color: #401010;
+  color: #d4c0b8;
+  border-top: 4px ridge #c9a066;
+}
+
+.flag-bar {
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(to right, #008C45 33%, #F4F5F0 33%, #F4F5F0 66%, #CD212A 66%);
+  margin-top: 1rem;
+}
+
+/* ==== Mouse Trail ==== */
+.trail-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #c9a066;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+  animation: fadeOut 0.6s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
